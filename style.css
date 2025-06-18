@@ -21,6 +21,7 @@ header img {
     margin: 1400px;
     width: 80vw;
     margin: 0 auto;
+    background-size: cover;
 }
 
 
@@ -31,19 +32,30 @@ header .container-grid {
 
 
 .menu {
-    max-width: 700px;
-    width: 70%;
+    max-width: 1440px;
+    margin: 0 auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
 
+
 .menu a {
-    font-size: 20px;
-    color: black;
-    font-family: "Recursive" sans-linear;
-    align-items: center;
+    color: rgb(12, 12, 12);
+    padding: 12px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: 25px;
 }
+
+.hero-section{
+    background-image: url(./imgs/Banner01.png);
+    background-size: cover;
+    height: 100vh;
+}
+
 
 
 /* ------------------------- Categorias --------------------- */
@@ -60,11 +72,11 @@ header .container-grid {
     padding: 60px 40px;
 }
 
-.categorias-section h2 {
+.categorias-section h3 {
     color: #55603b;
-    font-size: 20px;
+    font-size: 45px;
     letter-spacing: 1px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .categorias-container {
@@ -97,67 +109,110 @@ header .container-grid {
     margin: 0 auto;
 }
 
+.dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      background-color: #ccc;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .dot.active {
+      background-color: #999;
+    }   
+
+  
 
 /* ------------sobre------------ */
-#sobre {
-    display: flex;
-    align-items: center;
-    gap: 80px;
-    margin-top: 120px;
-    margin-bottom: 120px;
-    text-align: center;
-    color: #55603b;
+.sobre-nos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 
-#sobre img {
-    max-width: 460px;
-    width: 40%;
-    border-radius: 40px;
-    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+.imagem-sobre img {
+  width: 535px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  margin-left: 40px;
 }
 
-#sobre p {
-    font-family: "recursive", sans-linear;
-    font-size: 32px;
-    margin-top: 500px;
-    text-align: justify;
-    color: black;
-    margin-top: 70px;
-    margin-right: 555px;
-    text-align: center;
+.texto-sobre {
+  max-width:800px;
+  text-align: center;
 }
+
+.texto-sobre h2 {
+  color: #55603b; 
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.texto-sobre p {
+  color: #000;
+  font-size: 32px;
+}
+
+.btn-ok {
+  background-color: #ccc;
+  border: none;
+  padding: 10px 150px;
+  border-radius: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ok:hover {
+  background-color: #aaa;
+}
+
+
+.hero-section-parallax{
+    background-image: url(./imgs/Banner02.png);
+    background-size: cover;
+    height: 50vh;
+    }
 
 
 /* -------------------Icones------------------ */
-.icones-section {
+.beneficios {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
+    gap: 100px;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff; /* fundo claro */
     flex-wrap: wrap;
-    gap: 40px;
-    padding: 50px 20px;
-
 }
 
-.icone-item {
+.beneficios .item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 150px;
-    text-align: center;
-    color: #55603b;
+    color: #000000;
+    font-size: 18px;
+    height: 150px;
 }
 
-.icone-item img {
-    width: 40px;
-    height: 40px;
+.beneficios .item img {
+    width: 50px;
+    height: 50px;
     margin-bottom: 10px;
 }
 
-.icone-item p {
-    font-size: 24px;
-    color: #333;
-    margin: 0;
-}
+
 
 /* ---------------------------- Contato -------------------- */
 
@@ -167,7 +222,7 @@ body {
     background-color: #fdf9f3;
 }
 
-.rodape {
+.rodape-contato {
     background-color: #fdf9f3;
     display: flex;
     justify-content: space-between;
@@ -178,7 +233,7 @@ body {
 }
 
 .coluna {
-    min-width: 450px;
+    min-width: 550px;
     margin: 20px;
 }
 
@@ -216,121 +271,126 @@ body {
 }
 
 
+
+
 /* -------------------- Email ------------------ */
-body {
-    margin: 0;
-    font-family: "Recursive", sans-linear
-}
-
+ /* --- Newsletter Section --- */
 .newsletter {
-    background-color: #d8d0c9;
-    padding: 20px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    animation: fadeIn 1s ease-in;
+  background-color: #d8d0c9;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  
 }
 
-.info {
-    display: flex;
-    align-items: center;
-    gap: 300px;
-    margin-bottom: 100px;
+.newsletter .info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 0;
+
 }
 
-.info img {
-    width: 40px;
-    height: auto;
+.newsletter .info svg {
+  width: 40px;
+  height: 40px;
 }
 
-.info strong {
-    font-size: 14px;
-    color: #222;
+.newsletter .info strong {
+  font-size: 14px;
+  color: #222;
 }
 
-.info span {
-    font-size: 13px;
-    color: #333;
+.newsletter .info span {
+  font-size: 13px;
+  color: #333;
 }
 
 .formulario {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+ 
 }
 
 .formulario input {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 15px;
-    background-color: #f2edeb;
-    font-size: 13px;
-    transition: box-shadow 0.3s ease;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 15px;
+  background-color: #f2edeb;
+  font-size: 13px;
+  transition: box-shadow 0.3s ease;
 }
 
 .formulario input:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(50, 50, 50, 0.3);
+  outline: none;
+  box-shadow: 0 0 5px rgba(50, 50, 50, 0.3);
 }
 
 .formulario button {
-    padding: 8px 14px;
-    background-color: #4d5d2d;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  padding: 8px 14px;
+  background-color: #4d5d2d;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .formulario button:hover {
-    background-color: #3b4a22;
-    transform: scale(1.05);
+  background-color: #006837;
+  transform: scale(1.05);
 }
 
-/* ------------------ Rodape ---------------------- */
-
-
-
-body {
-    display: flex;
-    /* Transforma o body em um container flexível */
-    justify-content: center;
-    /* Centraliza o conteúdo horizontalmente */
-    align-items: center;
-    /* Centraliza o conteúdo verticalmente */
-    min-height: 100vh;
-    /* Garante que o body ocupe a altura total da viewport */
+/* --- Footer --- */
+.rodape {
+  background-color: #000;
+  color: white;
+  
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  position: relative;
+  text-align: center;
+ 
 }
 
-.button {
-    padding: 10px 20px;
-    border: 1px solid #7d7d7d;
-    /* Borda similar à imagem */
-    background-color: #ffffff;
-    /* Fundo branco para os botões */
-    color: #4a4a4a;
-    /* Cor do texto */
-    text-decoration: none;
-    border-radius: 3px;
-    /* Levemente arredondado */
-    font-size: 16px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    /* Sombra suave para dar profundidade */
-    gap: 20px;
-    /* Espaço entre os botões */
+.linha-topo {
+  border: 0;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 80px;
+  width: 190%;
 }
 
-body {
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f8f0e5;
-    /* Cor de fundo similar à imagem */
-    margin: 0;
+.rodape-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+
+.texto-rodape {
+  text-align:start ;
+  margin-bottom: 15px;
+}
+
+.icones-sociais {
+  margin-bottom: 15px;
+ 
+}
+
+.icones-sociais img {
+  width: 24px;
+  margin: 0 10px;
+  filter: brightness(0) invert(1);
+}
+
+.logo-rodape img{
+  width: 100px;
 }
