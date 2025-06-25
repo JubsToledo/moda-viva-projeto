@@ -4,6 +4,32 @@
     box-sizing: border-box;
 }
 
+
+
+/* Reset de margens */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Faixa preta no topo */
+.top-banner {
+    width: 100%;
+    height: 25px;
+    background-color: #000;
+    color: #C7BCB0;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: "Recursive", mono-linear;
+}
+
 header {
     background-color: rgb(255, 243, 228);
     display: flex;
@@ -42,18 +68,25 @@ header .container-grid {
 
 
 .menu a {
-    color: rgb(12, 12, 12);
+    color: black;
+    transition: color 0.3s ease;
+    cursor: pointer;
     padding: 12px 24px;
-    position: sticky;
     top: 0;
     z-index: 1000;
     font-size: 25px;
+    text-decoration: none;
+
 }
 
-.hero-section{
+.menu :hover {
+    color: #96a76b;
+}
+
+.hero-section {
     background-image: url(./imgs/Banner01.png);
     background-size: cover;
-    height: 100vh;
+    height: 85vh;
 }
 
 
@@ -70,6 +103,7 @@ header .container-grid {
 .categorias-section {
     text-align: center;
     padding: 60px 40px;
+    margin: 200px;
 }
 
 .categorias-section h3 {
@@ -110,79 +144,109 @@ header .container-grid {
 }
 
 .dots {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-      gap: 8px;
-    }
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 8px;
+}
 
-    .dot {
-      width: 12px;
-      height: 12px;
-      background-color: #ccc;
-      border-radius: 50%;
-      display: inline-block;
-    }
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+}
 
-    .dot.active {
-      background-color: #999;
-    }   
+.dot.active {
+    background-color: #999;
+}
 
-  
+.label {
+    margin: 15px auto;
+    width: 100px;
+    padding: 6px 12px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.label:hover {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #333;
+    transition: transform 0.2s;
+}
+
+.arrow:hover {
+    transform: scale(1.2);
+}
+
 
 /* ------------sobre------------ */
 .sobre-nos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 40px;
-  gap: 60px;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin: 150px;
 }
 
 .imagem-sobre img {
-  width: 535px;
-  border-radius: 20px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  margin-left: 40px;
+    width: 535px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    margin-left: 40px;
 }
 
 .texto-sobre {
-  max-width:800px;
-  text-align: center;
+    max-width: 800px;
+    text-align: center;
 }
 
 .texto-sobre h2 {
-  color: #55603b; 
-  font-size: 45px;
-  margin-bottom: 20px;
+    color: #55603b;
+    font-size: 45px;
+    margin-bottom: 20px;
 }
 
 .texto-sobre p {
-  color: #000;
-  font-size: 32px;
+    color: #000;
+    font-size: 32px;
 }
 
 .btn-ok {
-  background-color: #ccc;
-  border: none;
-  padding: 10px 150px;
-  border-radius: 10px;
-  font-size: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    background-color: #ccc;
+    border: none;
+    padding: 10px 150px;
+    border-radius: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .btn-ok:hover {
-  background-color: #aaa;
+    background-color: #585757;
 }
 
 
-.hero-section-parallax{
+.hero-section-parallax {
     background-image: url(./imgs/Banner02.png);
     background-size: cover;
-    height: 50vh;
-    }
+    height: 65vh;
+}
 
 
 /* -------------------Icones------------------ */
@@ -190,26 +254,98 @@ header .container-grid {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap: 100px;
     text-align: center;
-    padding: 40px 20px;
-    background-color: #fff; /* fundo claro */
+    background-color: #fff;
     flex-wrap: wrap;
+    font-family: "Recursive", sans-serif;
+    gap: 80px;
+    padding: 2px;
+    margin: 80px;
+    margin-bottom: 10px;
 }
 
 .beneficios .item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #000000;
     font-size: 18px;
     height: 150px;
+    color: black;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.beneficios .item :hover {
+    color: #96a76b;
+}
+
+
+.item-compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    height: 150px;
+    color: black;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.item-compra :hover {
+    color: #96a76b;
+}
+
+.item-custo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    height: 150px;
+    color: black;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.item-custo :hover {
+    color: #96a76b;
+}
+
+.item-sustentavel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    height: 150px;
+    color: black;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.item-sustentavel :hover {
+    color: #96a76b;
 }
 
 .beneficios .item img {
     width: 50px;
     height: 50px;
     margin-bottom: 10px;
+}
+
+.icons {
+    color: black;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    gap: 30px;
+    padding: 20px;
+}
+
+.heart :hover {
+    color: red;
+}
+
+.icones-menu :hover {
+    color: #96a76b;
 }
 
 
@@ -219,17 +355,17 @@ header .container-grid {
 body {
     margin: 0;
     font-family: "Recursive", sans-linear;
-    background-color: #fdf9f3;
+    background-color: #FEF9F3;
 }
 
 .rodape-contato {
-    background-color: #fdf9f3;
+    background-color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 40px 20px;
     text-align: center;
     flex-wrap: wrap;
+    margin: 50px;
 }
 
 .coluna {
@@ -274,123 +410,121 @@ body {
 
 
 /* -------------------- Email ------------------ */
- /* --- Newsletter Section --- */
+/* --- Newsletter Section --- */
 .newsletter {
-  background-color: #d8d0c9;
-  padding: 20px 30px;
+    background-color: #d8cfc7;
+  padding: 85px 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  
+  gap: 150px;
+
 }
 
 .newsletter .info {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 0;
 
 }
 
 .newsletter .info svg {
-  width: 40px;
-  height: 40px;
+    width: 80px;
+    height: 80px;
 }
 
 .newsletter .info strong {
-  font-size: 14px;
-  color: #222;
+    font-size: 23px;
+    color: #222;
 }
 
 .newsletter .info span {
-  font-size: 13px;
-  color: #333;
+    font-size: 22px;
+    color: #333;
+    
 }
 
 .formulario {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
- 
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+
 }
 
 .formulario input {
-  padding: 8px 12px;
-  border: none;
-  border-radius: 15px;
-  background-color: #f2edeb;
-  font-size: 13px;
-  transition: box-shadow 0.3s ease;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 15px;
+    background-color: #f2edeb;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease;
 }
 
 .formulario input:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(50, 50, 50, 0.3);
+    outline: none;
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.3);
 }
 
 .formulario button {
-  padding: 8px 14px;
-  background-color: #4d5d2d;
-  color: white;
-  border: none;
-  border-radius: 15px;
-  font-size: 13px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 8px 14px;
+    background-color: #55603B;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .formulario button:hover {
-  background-color: #006837;
-  transform: scale(1.05);
+    background-color: #3D452C;
+    transform: scale(1.05);
 }
 
 /* --- Footer --- */
-.rodape {
-  background-color: #000;
-  color: white;
-  
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  position: relative;
-  text-align: center;
- 
+footer {
+    width: 1920px;
+    height: 381px;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px 80px;
+    font-family: "Recursive", sans-linear;
+    font-size: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 135px;
 }
 
-.linha-topo {
-  border: 0;
-  height: 3px;
-  background-color: white;
-  margin-bottom: 80px;
-  width: 190%;
+.footer-line {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin-bottom: 20px;
 }
 
-.rodape-conteudo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
- 
+.footer-text {
+    line-height: 1.6;
 }
 
-.texto-rodape {
-  text-align:start ;
-  margin-bottom: 15px;
+.footer-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.icones-sociais {
-  margin-bottom: 15px;
- 
+.footer-icons img {
+    width: 38px;
+    height: 38px;
+    transition: transform 0.3s;
 }
 
-.icones-sociais img {
-  width: 24px;
-  margin: 0 10px;
-  filter: brightness(0) invert(1);
-}
-
-.logo-rodape img{
-  width: 100px;
+.footer-icons img:hover {
+    transform: scale(1.1);
 }
